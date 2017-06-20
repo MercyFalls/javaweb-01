@@ -8,12 +8,21 @@
         <title>PRUEBA BD</title>
     </head>
     <body>
-        <%
-            Conexion conn = new Conexion();
-            //conn.setInsertar("insert into courses(name, descripcion, created_at) "
-              //      + "values('Sistema 2', 'Sin Descripcion',now())");
-            conn.setInsertar("insert into users(name, apepat, apemat, username, password, created_at, state) "
-                    + "values('Juan','Guerrero','Guerrero','jgue','secret',now(),'active')");
-        %>
+        <form method="post" action="ServletUsuario">
+            <table>
+                <tr>
+                    <td>Usuario</td>
+                    <td><input type="text" name="username"</td>
+                </tr>
+                <tr>
+                    <td>Clave</td>
+                    <td><input type="password" name="password"</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Ingresar"</td>
+                </tr>
+            </table>
+        </form>
+
     </body>
 </html>
